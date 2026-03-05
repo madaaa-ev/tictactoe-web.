@@ -39,6 +39,8 @@ alt="Preview"/>
 
 </div>
 
+✨ https://madaaa-ev.github.io/tictactoe-web/ 
+
 ---
 
 ## Stats & Fun
