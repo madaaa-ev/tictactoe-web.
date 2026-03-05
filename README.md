@@ -15,6 +15,22 @@ Created by: mada arf.9
 
 ---
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/shiro-nesu/database-img/main/file_1772741311931.jpeg" alt="TicTacToe Screenshot" width="70%" style="max-width:100%; height:auto; object-fit:cover; border-radius:12px;"/>
+</p>
+
+---
+
+### Tips Tampilan Responsif
+
+- **Zoom otomatis**: GitHub Markdown tidak mendukung zoom manual, tapi kita bisa memanfaatkan `width` dan `max-width` agar gambar tetap proporsional saat layar mengecil.  
+- **Gunakan `object-fit: cover`**: memastikan bagian penting dari gambar tetap terlihat tanpa terpotong.  
+- **Teks yang jelas**: gunakan ukuran font yang cukup besar untuk caption dan deskripsi sehingga tetap terbaca di layar kecil.  
+
+> Dengan pengaturan ini, tampilan game akan tetap menarik, baik di desktop maupun HP.
+
+---
+
 ## Watch the Game in Action
 ![Dreamy GIF](https://raw.githubusercontent.com/madaaa-ev/madaa-arf.9/main/ezgif-7172dc4ddbc035d1.gif)
 
