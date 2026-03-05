@@ -30,7 +30,6 @@ Created by: mada arf.9
 ## Join the Fun!
 ![Play Now](https://img.shields.io/badge/Play-TicTacToe-ff69b4?style=for-the-badge&logo=gamepad&logoColor=white)
 ![Enter Arena](https://img.shields.io/badge/Enter%20Arena-Now-00ff9d?style=for-the-badge&logo=github&logoColor=black)
-![Challenge Friends](https://img.shields.io/badge/Challenge-Friends-f0c75e?style=for-the-badge&logo=twitch&logoColor=white)
 
 ---
 
