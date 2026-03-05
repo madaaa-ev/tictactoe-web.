@@ -32,8 +32,7 @@ Created by: mada arf.9
 ![Dreamy GIF](https://raw.githubusercontent.com/madaaa-ev/madaa-arf.9/main/ezgif-7172dc4ddbc035d1.gif)
 
 <div align="center">
-
-<img src="https://raw.githubusercontent.com/shiro-nesu/database-img/main/file_1772743881415.jpeg" 
+ <img src="https://raw.githubusercontent.com/shiro-nesu/database-img/main/file_1772743881415.jpeg" 
 width="600" 
 alt="Preview"/>
 
