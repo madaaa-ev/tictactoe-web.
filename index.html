@@ -183,7 +183,7 @@ button:hover{ background:#444; }
 <div id="startScreen">
   <h1>TicTacToe</h1>
   <p style="letter-spacing:2px;opacity:.75;margin-bottom:25px;">
-    Enjoy U're Fuckin Games Here..
+   Enter and Enjoy the Game..
   </p>
 
   <div class="desc">
@@ -198,7 +198,7 @@ button:hover{ background:#444; }
     </span>
   </div>
 
-  <button id="startBtn">ENTER FUCKIN ARENA..</button>
+  <button id="startBtn">ENTER ARENA</button>
 </div>
 
 <!-- Players & Bot kotak landscape di atas board, awalnya hidden -->
@@ -209,7 +209,7 @@ button:hover{ background:#444; }
 
 <div id="endScreen">
   <h1 id="resultText"></h1>
-  <button onclick="resetGame()">NEXT FUCKIN ROUND..</button>
+  <button onclick="resetGame()">NEXT ROUND</button>
 </div>
 
 <script>
@@ -228,9 +228,13 @@ let totalScore=0, totalLoss=0, totalDraw=0
 let inputBlocked=false
 let tempX=0, tempO=0
 
+let firstMove="you" // tambahan
+
 function updateScore(){
-  scoreBoard.innerText=`Total Score: ${totalScore} | Total Loss: ${totalLoss} | Total Draw: ${totalDraw}\nBot Mode: ${aiMode.charAt(0).toUpperCase()+aiMode.slice(1)}`
-  
+  scoreBoard.innerText=`Total Score: ${totalScore} | Total Loss: ${totalLoss} | Total Draw: ${totalDraw}
+Bot Mode: ${aiMode.charAt(0).toUpperCase()+aiMode.slice(1)}
+First Move: ${firstMove === "you" ? "You (X)" : "Bot (O)"}`
+
   let playerText = 'Players : '
   let botText = 'Main Bot : '
   for(let i=0;i<tempX;i++) playerText += 'X'
@@ -239,13 +243,25 @@ function updateScore(){
   playersBoard.style.display='flex'
 }
 
+function randomFirst(){
+  firstMove = Math.random() < 0.5 ? "you" : "bot"
+}
+
 function startGame(){
   document.getElementById("startScreen").style.display="none"
   board=Array(9).fill("")
   gameActive=true
   inputBlocked=false
+
+  randomFirst()
+
   renderBoard()
   updateScore()
+
+  if(firstMove === "bot"){
+    inputBlocked=true
+    botMove()
+  }
 }
 
 function resetGame(){
@@ -253,8 +269,16 @@ function resetGame(){
   gameActive=true
   inputBlocked=false
   endScreen.style.display="none"
+
+  randomFirst()
+
   renderBoard()
   updateScore()
+
+  if(firstMove === "bot"){
+    inputBlocked=true
+    botMove()
+  }
 }
 
 function renderBoard(){
@@ -288,7 +312,7 @@ function playerMove(i){
 
 function botMove(){
   if(!gameActive) return
-  const delay = Math.floor(Math.random()*1000)+1000 // 1-2 detik
+  const delay = Math.floor(Math.random()*1000)+1000
   setTimeout(()=>{
     let move = bestMove()
     if(move!==undefined) board[move]="O"
@@ -338,7 +362,7 @@ function endGame(){
     tempX++
     if(tempX>=5) tempX=0
     aiMode="aggressive"
-    resultText.innerText="VICTORY :\nBot Enters Aggressive Mode"
+    resultText.innerText="|| VICTORY ||\nBot Enters Aggressive Mode."
     resultText.classList.add("win")
   } 
   else if(winner=="O"){
@@ -346,7 +370,7 @@ function endGame(){
     tempO++
     if(tempO>=5) tempO=0
     aiMode="hard"
-    resultText.innerText="DEFEAT :\nBot Stabilized"
+    resultText.innerText=" || DEFEAT ||\nBot Stabilized."
     resultText.classList.add("lose")
   } 
   else{
@@ -356,7 +380,7 @@ function endGame(){
       aiMode="normal"
       drawCount=0
     }
-    resultText.innerText="DRAW :\nSystem Rebalancing"
+    resultText.innerText="|| DRAW ||\nSystem Rebalancing."
     resultText.classList.add("draw")
   }
 
@@ -375,5 +399,5 @@ document.addEventListener("keydown", e=>{
   }
 })
 </script>
-</body>
-</html>
+
+  
