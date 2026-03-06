@@ -1,3 +1,8 @@
+
+<p align="center">
+<img src="https://readme-typing-svg.herokuapp.com?font=Anton&size=52&duration=3200&pause=1000&color=000000&center=true&vCenter=true&width=1000&lines=Master+The+Board;Think+Before+You+Move;Three+In+A+Row+Wins;Strategy+Beats+Luck">
+</p>
+
 # TicTacToe Web Game 🎮
 
 📱💻 **Try it now:** [Play Here!](https://madaaa-ev.github.io/tictactoe-web/)
